@@ -1,0 +1,104 @@
+{@each item as talent,index}
+<div class="accordion-item">
+    <div class="accordion-item-header"># ${index | add} & match rate: ${talent.match_rate}</div>
+    <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+
+            <div class="userInfo">
+                <img src="${talent.profile.avatar}" alt="">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>${talent.profile.name}</td>
+                    </tr>
+                    <tr>
+                        <td>match rate:</td>
+                        <td>${talent.match_rate}</td>
+                    </tr>
+                    <tr>
+                        <td>url:</td>
+                        <td><a href="${talent.url}">${talent.url}</a></td>
+                    </tr>
+                    <tr>
+                        <td>pdf url:</td>
+                        <td><a href="${talent.pdf_url}">${talent.pdf_url}</a></td>
+                    </tr>
+                    <tr>
+                        <td>bio:</td>
+                        <td>${talent.profile.bio}</td>
+                    </tr>
+                    <tr>
+                        <td>country:</td>
+                        <td>${talent.profile.country}</td>
+                    </tr>
+                    <tr>
+                        <td>region:</td>
+                        <td>${talent.profile.region}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="experience">
+                <div class="title">Experience</div>
+                {@each talent.experience as exp,index}
+                <div class="one info">
+                    <img src="${exp.avatar}" alt="">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>${exp.name}</td>
+                        </tr>
+                        <tr>
+                            <td>time:</td>
+                            <td>${exp.time}</td>
+                        </tr>
+                        <tr>
+                            <td>position:</td>
+                            <td>${exp.position}</td>
+                        </tr>
+                        <tr>
+                            <td>country:</td>
+                            <td>${exp.country}</td>
+                        </tr>
+                        <tr>
+                            <td>region:</td>
+                            <td>${exp.region}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {@/each}
+            </div>
+            
+            <div class="education">
+                <div class="title">Education</div>
+                {@each talent.education as edu,index}
+                <div class="one info">
+                    <img src="${edu.avatar}" alt="">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>${edu.name}</td>
+                        </tr>
+                        <tr>
+                            <td>time:</td>
+                            <td>${edu.time}</td>
+                        </tr>
+                        <tr>
+                            <td>qualification:</td>
+                            <td>${edu.qualification}</td>
+                        </tr>
+                        <tr>
+                            <td>major:</td>
+                            <td>${edu.major}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {@/each}
+            </div>
+        </div>
+    </div>
+</div>
+{@/each}
